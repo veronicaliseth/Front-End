@@ -1,0 +1,38 @@
+body {
+	font-family: "Roboto Condensed";
+}
+.contend a {
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 38px;
+	line-height: 45px;
+
+	color: #ff6006;
+}
+.contend a:hover {
+	background: #ff6106ab;
+}
+.btn {
+	background-color: transparent;
+	border: none;
+	outline-style: none;
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	left: 1187px;
+	top: 34px;
+}
+.titulo {
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 38px;
+	line-height: 45px;
+
+	color: #009278;
+}
+.icon {
+	width: 26px;
+	height: 26px;
+}
