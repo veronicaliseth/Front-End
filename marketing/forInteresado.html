@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="images/brick.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <title>Formulario nivel interesado</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="interesado.css">
+
+  <style>
+    body {
+      background: #E5E5E5;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class=e73_38>
+    <div class=e132_27>
+      <div class="e132_26"></div>
+      <div class=e73_39>
+        <div class="e73_40"></div>
+        <div class="e73_41"></div>
+        <div class="e73_43"></div>
+      </div>
+    </div>
+    <div class="e75_54"></div>
+    <span class="e75_55">¡Felicidades, estar por comenzar un gran recorrido!</span>
+    <span class="encabeza2">Para formar parte de nuestra institución llena el siguiente formulario con tu información personal y la de un tutor.</span>
+    <span class="encabeza3">De esa forma nosotros nos adaptaremos de acuerdo a tus necesidades</span>
+    <div class="e75_56"></div>
+    <div class="e79_57"></div>
+    <a href="forAspirante.html"><button class="e88_83"></button><!--Botón Guardar--></a>
+    <span class="e88_84">Guardar Datos</span>
+    <span class="e88_85">RECUERDA GUARDAR TUS DATOS PARA SEGUIR CON EL PROCESO DE ADMISIÓN</span>
+
+    <div class=e100_42>
+      <div class="e100_43"></div>
+      <div class=e130_17>
+        <select class="e130_19"> <!--Comienza el apartado de grado de interes-->
+          <option selected>Seleccione una opción</option>
+          <option value="1">Primer Grado</option>
+          <option value="2">Segundo Grado</option>
+          <option value="3">Tercer Grado</option>
+        <select>
+        <div class="e130_21"></div>
+      </div>
+      <span class="e100_44">Datos de Contacto</span>
+      <!--input's-->
+      <label class="e100_45">Correo</label>
+      <input class="e100_46" id="correo">
+      <div class=e100_47>
+        <label class="e100_48">Domicilio*</label>
+        <input class="e100_49" id="domicilio">
+      </div>
+      <div class=e130_25>
+        <div  id="idnivel" class=e100_50>
+          <select  id="nivel" class="e130_18"> 
+            <!--Comienza el apartado de nivel de interes-->
+            <option selected>Seleccione una opción</option>
+            <option value=1>Maternal</option>
+            <option value=2>Preescolar</option>
+            <option value=3>Primaria</option>
+            <option value=4>Secundaria</option>
+            <option value=5>Educación media superior</option>
+            <option value=6>Educación superior</option>
+            <option value=7>Posgrado</option>
+            <option value=8>Doctorado</option>
+          <select>
+          <div class="e130_20"></div>
+          <label class="e100_51">Nivel interesado</label>
+        </div>
+      </div>
+      <div class=e100_53>
+        <label class="e100_54">Grado interesado</label>
+      </div>
+      <div class=e105_9>
+        <!--input telefonos-->
+        <input class="e100_76" id="tel_principal">
+        <div class=e100_59>
+          <label class="e100_60">Teléfono principal</label>
+        </div>
+      </div>
+      <div class=e105_11>
+        <input class="e100_75" id="tel_secundario">
+        <div class=e100_62><span class="e100_63">Teléfono secundario
+          </span></div>
+      </div>
+    </div>
+
+    <div class=e100_77>
+      <div class="e100_78"></div>
+       <span class="e100_79">Datos del Tutor</span>
+       <label class="e100_80">Nombre(s)</label>
+       <!--Nombre tutor -->
+      <input id="name_tutor" class="e100_81">
+      <div class=e100_82>
+        <label class="e100_83">Apellido Paterno</label>
+        <!--Apellido tutor paterno-->
+        <input  id="tutor_paterno" class="e100_84">
+      </div>
+      <div class=e100_93>
+        <label class="e100_94">Apellido Materno</label>
+        <!--Apellido tutor materno-->
+        <input  id="tutor_materno" class="e100_95">
+      </div>
+    </div>
+
+    <div class="e88_81"></div>
+    
+    <div class=e134_37>
+      <div class=e100_41>
+        <div class="e100_2"></div>
+        <span class="e100_9">Datos Personales</span><label class="e100_10">Nombre</label>
+        <!--Nombre-->
+        <input class="e100_11" id="nombre_personal">
+        <div class=e100_14><label class="e100_12">Apellido Paterno</label>
+          <!--Apellido Paterno-->
+          <input class="e100_13" id="apellido_paterno"></input>
+        </div>
+        <div class=e100_35><label class="e100_36">Escuela de procedencia</label></div>
+        <div class=e100_38><span class="e100_39">¿Cómo se entero?
+          </span></div>
+        <div class=e100_15><label class="e100_16">Apellido Materno
+          </label>
+          <!--Apellido Materno-->
+          <input class="e100_17" id="apellido_materno"></input>
+
+        </div>
+        <div class="e105_3">
+          <!--Fecha de nacimiento-->
+          <input class="e105_4" type="date" value="22-12-2021" id="fecha_nac">
+          <div class="e100_23">
+            <span class="e100_24">Fecha de nacimiento</span>
+          </div>
+          <div class="e105_7">
+            <div class="e130_16">
+              <select class="e100_37"><!--Comienza el apartado de datos de escula de procedencia-->
+                <option selected>Seleccione una opción</option>
+                <option value="1">AGUSTIN MELGAR</option>
+                <option value="2">AMADO NERVO</option>
+                <option value="3">BELISARIO DOMINGUEZ</option>
+                <option value="4">CENTRO ACTIVO INTEGRAL ARRIAGA</option>
+                <option value="5">ANGEL ALBINO CORZO</option>
+                <option value="6">CENTRO EDUCATIVO AMERICA</option>
+                <option value="7">BICENTENARIO DE LA INDEPENDENCIA NACIONAL</option>
+                <option value="8">CENTRO DE EDUCACION JUVENIL COLEGIO LA PAZ</option>
+                <option value="9">CENTRO DE ESTUDIOS JOSE DIEGO DE QUEVEDO RIVERA</option>
+                <option value="10">ADOLFO LOPEZ MATEOS EMSAD</option>
+                <option value="11">BACHILLERATO UVG CAMPUS COMITAN</option>
+                <option value="12">CENTRO DE BACHILLERATO INTERCULTURAL AMADO NERVO</option>
+                <option value="13">CENTRO DE ESTUDIOS PROFESIONALES DE CHIAPAS FRAY BARTOLOME DE LAS CASAS</option>
+                <option value="14">CENTRO UNIVERSITARIO MESOAMERICANO JOAQUIN MIGUEL GUTIERREZ</option>
+                <option value="15">COLEGIO UNIVERSITARIO VERSALLES</option>
+              </select>
+              <select class="e100_40"> <!--Comienza el apartado de datos de como se entero-->
+                <option selected>Seleccione una opción</option>
+                <option value="1">Redes sociales</option>
+                <option value="2">Mediante un amigo</option>
+                <option value="3">Mediante tu institución</option>
+                <option value="3">Mediante una feria profesiográfica</option>
+                <option value="4">Otro</option>
+               <select>
+              <div class="e130_3"></div>
+              <div class="e130_4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=e130_23>
+        <div><input class="e130_6" type="radio" name="Genero" value="Mujer" id="mujer"/></div> <!--Sexo Mujer-->
+        <div><input class="e130_7" type="radio" name="Genero" value="Hombre" id="hombre"/></div><!--Sexo Hombre-->
+        <div><input class="e130_8" type="radio" name="Genero" value="Otro" id="otro"/></div><!--Sexo Otro-->
+         <label class="e130_9">Hombre</label>
+         <label class="e130_10">Mujer</label>
+         <label class="e130_11">Otro</label>
+         <label class="e100_19">Genero</label>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+ $(document).ready(function(){
+   $('#idnivel').on('change','#nivel',function(){
+    var selected  = $('#nivel option:selected');
+    if (selected.val() > 4) {
+      $('#idname').attr('disabled','disabled');
+      $('#idapellidoPT').attr('disabled','disabled');
+      $('#ipapellidoPM').attr('disabled','disabled');
+    }else{
+      $('#idname').removeAttr('disabled');
+      $('#idapellidoPT').removeAttr('disabled');
+      $('#ipapellidoPM').removeAttr('disabled');
+    }
+   });
+ });
+</script>
+
+</html>
