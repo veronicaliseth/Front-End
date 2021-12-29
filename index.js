@@ -46,3 +46,14 @@ function usuarios(){
     }).catch(e => { console.log("El ingreso fallo"); })
 
 }
+
+function aspirantes(){
+
+
+}
+
+function interesados(){
+
+
+    
+}
