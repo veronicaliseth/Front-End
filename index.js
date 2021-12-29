@@ -95,7 +95,23 @@ function aspirantes(){
 }
 
 function interesados(){
-
+    const nombreinteresados = document.getElementById("nombre").value;
+    const paternointeresados = document.getElementById("nombre").value;
+    const maternointeresados = document.getElementById("nombre").value;
+    const generointeresados = document.getElementById("nombre").value;
+    const escuelaprocedenciainteresados = document.getElementById("nombre").value;
+    const comoenterointeresados = document.getElementById("nombre").value;
+    
+    const correointeresados = document.getElementById("nombre").value;
+    const domiciliointeresados = document.getElementById("nombre").value;
+    const telefonoprincipalinteresados = document.getElementById("nombre").value;
+    const telefonosecundariointeresados = document.getElementById("nombre").value;
+    const nivelinteresados = document.getElementById("nombre").value;
+    const ngradointeresados = document.getElementById("nombre").value;
+    
+    const nombretutorinteresados = document.getElementById("nombre").value;
+    const paternotutorinteresados = document.getElementById("nombre").value;
+    const maternotutorinteresados = document.getElementById("nombre").value;
 
     
 }
