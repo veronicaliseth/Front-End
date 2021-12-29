@@ -27,4 +27,23 @@ function credencial(){
         console.log("registro")
     }).catch(e => { console.log("El registro fallo"); })
 
+    function usuarios(){
+        const username = document.getElementById("user").value;
+        const password = document.getElementById("password").value;  
+    
+        axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+    
+        axios.post("http://localhost:8000/usuarios", {
+            username1 = username,
+            password1 = password 
+            
+        }).then((data) => {
+            swal("Buen trabajo!", "Ha ingresado con exito!", "success");
+            console.log(data);
+            console.log("registro")
+        }).catch(e => { console.log("El ingreso fallo"); })
+    
+    }
+
 }
