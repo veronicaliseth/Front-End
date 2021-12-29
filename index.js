@@ -95,23 +95,48 @@ function aspirantes(){
 }
 
 function interesados(){
-    const nombreinteresados = document.getElementById("nombre").value;
-    const paternointeresados = document.getElementById("nombre").value;
-    const maternointeresados = document.getElementById("nombre").value;
-    const generointeresados = document.getElementById("nombre").value;
-    const escuelaprocedenciainteresados = document.getElementById("nombre").value;
-    const comoenterointeresados = document.getElementById("nombre").value;
+    const nombreinteresados = document.getElementById("nombre_personal").value;
+    const paternointeresados = document.getElementById("apellido_paterno").value;
+    const maternointeresados = document.getElementById("apellido_materno").value;
+    const generointeresados = document.getElementById("genero_interesados").value;
+    const fechanacimientointeresado = document.getElementById("fecha_nac").value;
+    const escuelaprocedenciainteresados = document.getElementById("escuela_procedencia_interesados").value;
+    const comoenterointeresados = document.getElementById("entero").value;
     
-    const correointeresados = document.getElementById("nombre").value;
-    const domiciliointeresados = document.getElementById("nombre").value;
-    const telefonoprincipalinteresados = document.getElementById("nombre").value;
-    const telefonosecundariointeresados = document.getElementById("nombre").value;
-    const nivelinteresados = document.getElementById("nombre").value;
-    const ngradointeresados = document.getElementById("nombre").value;
+    const correointeresados = document.getElementById("correo").value;
+    const domiciliointeresados = document.getElementById("domicilio").value;
+    const telefonoprincipalinteresados = document.getElementById("tel_principal").value;
+    const telefonosecundariointeresados = document.getElementById("tel_secundario").value;
+    const nivelinteresados = document.getElementById("nivel").value;
+    const gradointeresados = document.getElementById("grado_interesados").value;
     
-    const nombretutorinteresados = document.getElementById("nombre").value;
-    const paternotutorinteresados = document.getElementById("nombre").value;
-    const maternotutorinteresados = document.getElementById("nombre").value;
+    const nombretutorinteresados = document.getElementById("name_tutor").value;
+    const paternotutorinteresados = document.getElementById("tutor_paterno").value;
+    const maternotutorinteresados = document.getElementById("tutor_materno").value;
 
+    axios.post("http://localhost:8000/interesados", {
+        nombreinteresados1 = nombreinteresados,
+        paternointeresados1 = paternointeresados,
+        maternointeresados1 = maternointeresados,
+        generointeresados1 = generointeresados,
+        fechanacimientointeresado1 = fechanacimientointeresado,
+        escuelaprocedenciainteresados1= escuelaprocedenciainteresados,
+        comoenterointeresados1 = comoenterointeresados,
+
+        correointeresados1 = correointeresados,
+        domiciliointeresados1 = domiciliointeresados,
+        telefonoprincipalinteresados1 = telefonoprincipalinteresados,
+        telefonosecundariointeresados1 = telefonosecundariointeresados,
+        nivelinteresados1 = nivelinteresados,
+        gradointeresados1 = gradointeresados,
+        
+        nombretutorinteresados1 = nombretutorinteresados,
+        paternointeresados1 = paternotutorinteresados,
+        maternotutorinteresados1 = maternotutorinteresados
     
+    }).then((data) => {
+        swal("Buen trabajo!", "Ha ingresado con exito!", "success");
+        console.log(data);
+        console.log("registro")
+    }).catch(e => { console.log("El ingreso fallo"); })
 }
