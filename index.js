@@ -1,3 +1,7 @@
+
+var boton = document.getElementById("admi");
+boton.addEventListener("click",usuarios,true);
+
 function credencial(){
     const nombreAlumno = document.getElementById("name_alumno").value;
     const matricula = document.getElementById("matricula").value;
@@ -29,25 +33,26 @@ function credencial(){
 }
 
 function usuarios(){
+    alert("prueba");
     const username = document.getElementById("user").value;
     const password = document.getElementById("password").value;  
+    let datos=[username,password];
 
-    axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+    /*axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
     axios.post("http://localhost:8000/usuarios", {
-        username1 = username,
-        password1 = password 
+        data:datos
         
     }).then((data) => {
         swal("Buen trabajo!", "Ha ingresado con exito!", "success");
         console.log(data);
         console.log("registro")
-    }).catch(e => { console.log("El ingreso fallo"); })
+    }).catch(e => { console.log("El ingreso fallo"); })*/
 
 }
 
-function aspirantes(){
+/*function aspirantes(){
     const nombre = document.getElementById("nombre").value;
     const apellidopaterno = document.getElementById("paterno").value;
     const apellidomaterno = document.getElementById("materno").value;
@@ -135,8 +140,8 @@ function interesados(){
         maternotutorinteresados1 = maternotutorinteresados
     
     }).then((data) => {
-        swal("Buen trabajo!", "Ha ingresado con exito!", "success");
+        swal("Buen trabajo!", "ingresado con exito!", "success");
         console.log(data);
         console.log("registro")
     }).catch(e => { console.log("El ingreso fallo"); })
-}
+}*/
