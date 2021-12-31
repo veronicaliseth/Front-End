@@ -1,6 +1,16 @@
-
 var boton = document.getElementById("admi");
 boton.addEventListener("click",usuarios,true);
+var botonmark = document.getElementById("mark");
+botonmark.addEventListener("click",usuarios,true);
+
+var botoncredencial = document.getElementById("boton_credencial");
+botoncredencial.addEventListener("click",credencial,true);
+
+var botonaspirantes = document.getElementById("boton_aspirantes");
+botonaspirantes.addEventListener("click",aspirantes,true);
+
+var botoninteresados = document.getElementById("boton_interesados");
+botoninteresados.addEventListener("click",interesados,true);
 
 function credencial(){
     const nombreAlumno = document.getElementById("name_alumno").value;
@@ -12,18 +22,13 @@ function credencial(){
     const nombreCompletoFamiliar = document.getElementById("nombre_completo").value;
     const numeroTelefono = document.getElementById("telefono_alumno").value;
 
+    let datoscredencial = [nombreAlumno,matricula,curp,carrera,tipoSangre,nss,nombreCompletoFamiliar,numeroTelefono]
+
     axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
     axios.post("http://localhost:8000/credencialstudent", {
-        nombreAlumno1: nombreAlumno,
-        matricula1: matricula,
-        curp1: curp,
-        carrera1: carrera,
-        tipoSangre1: tipoSangre,
-        nss1: nss,
-        nombreCompletoFamiliar1: nombreCompletoFamiliar,
-        numeroTelefono1: numeroTelefono
+        data:datoscredencial
         
     }).then((data) => {
         swal("Buen trabajo!", "Se ha registrado con exito!", "success");
@@ -38,9 +43,6 @@ function usuarios(){
     const password = document.getElementById("password").value;  
     let datos=[username,password];
 
-    /*axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
-    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-
     axios.post("http://localhost:8000/usuarios", {
         data:datos
         
@@ -48,11 +50,11 @@ function usuarios(){
         swal("Buen trabajo!", "Ha ingresado con exito!", "success");
         console.log(data);
         console.log("registro")
-    }).catch(e => { console.log("El ingreso fallo"); })*/
+    }).catch(e => { console.log("El ingreso fallo"); })
 
 }
 
-/*function aspirantes(){
+function aspirantes(){
     const nombre = document.getElementById("nombre").value;
     const apellidopaterno = document.getElementById("paterno").value;
     const apellidomaterno = document.getElementById("materno").value;
@@ -72,28 +74,12 @@ function usuarios(){
     const ninterno = document.getElementById("no_int").value;
     const rfc = document.getElementById("id_rfc").value;
 
+    let datosaspirantes = [nombre,apellidopaterno,apellidomaterno,telefonoprincipal,telefonosecundario,correo,domicilio,alergias,padecimientos,nombrefactura,paternofactura,maternofactura,codigopostal,colonia,nexterno,ninterno,rfc]
     axios.post("http://localhost:8000/aspirantes", {
-        nombre1 = nombre,
-        apellidopaterno1 = apellidopaterno,
-        apellidomaterno1 = apellidomaterno,
-        telefonoprincipal1 = telefonoprincipal,
-        telefonosecundario1 = telefonosecundario,
-        correo1 = correo,
-        domicilio1 = domicilio,
-        alergias1 = alergias,
-        padecimientos1 = padecimientos,
-
-        nombrefactura1 = nombrefactura, 
-        paternofactura1 = paternofactura,
-        maternofactura1 = maternofactura,
-        codigopostal1 = codigopostal,
-        colonia1 = colonia,
-        nexterno1 = nexterno,
-        ninterno1 = ninterno,
-        rfc1 = rfc
+        data:datosaspirantes
         
     }).then((data) => {
-        swal("Buen trabajo!", "Ha ingresado con exito!", "success");
+        swal("Buen trabajo!", "Ha registrado con exito!", "success");
         console.log(data);
         console.log("registro")
     }).catch(e => { console.log("El ingreso fallo"); })
@@ -119,29 +105,14 @@ function interesados(){
     const paternotutorinteresados = document.getElementById("tutor_paterno").value;
     const maternotutorinteresados = document.getElementById("tutor_materno").value;
 
-    axios.post("http://localhost:8000/interesados", {
-        nombreinteresados1 = nombreinteresados,
-        paternointeresados1 = paternointeresados,
-        maternointeresados1 = maternointeresados,
-        generointeresados1 = generointeresados,
-        fechanacimientointeresado1 = fechanacimientointeresado,
-        escuelaprocedenciainteresados1= escuelaprocedenciainteresados,
-        comoenterointeresados1 = comoenterointeresados,
+    let datosinteresados = [nombreinteresados,paternointeresados,maternointeresados,generointeresados,fechanacimientointeresado,escuelaprocedenciainteresados,comoenterointeresados,correointeresados,domiciliointeresados,telefonoprincipalinteresados,telefonosecundariointeresados,nivelinteresados,gradointeresados,nombretutorinteresados,paternotutorinteresados,maternotutorinteresados]
 
-        correointeresados1 = correointeresados,
-        domiciliointeresados1 = domiciliointeresados,
-        telefonoprincipalinteresados1 = telefonoprincipalinteresados,
-        telefonosecundariointeresados1 = telefonosecundariointeresados,
-        nivelinteresados1 = nivelinteresados,
-        gradointeresados1 = gradointeresados,
-        
-        nombretutorinteresados1 = nombretutorinteresados,
-        paternointeresados1 = paternotutorinteresados,
-        maternotutorinteresados1 = maternotutorinteresados
+    axios.post("http://localhost:8000/interesados", {
+        data:datosinteresados
     
     }).then((data) => {
-        swal("Buen trabajo!", "ingresado con exito!", "success");
+        swal("Buen trabajo!", "Ingresado con exito!", "success");
         console.log(data);
         console.log("registro")
     }).catch(e => { console.log("El ingreso fallo"); })
-}*/
+}
