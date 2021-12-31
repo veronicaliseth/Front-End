@@ -20,8 +20,17 @@ function aspirantes(){
     const nexterno = document.getElementById("no_ext").value;
     const ninterno = document.getElementById("no_int").value;
     const rfc = document.getElementById("id_rfc").value;
+    const fecha = new Date();
 
-    let datosaspirantes = [nombre,apellidopaterno,apellidomaterno,telefonoprincipal,telefonosecundario,correo,domicilio,alergias,padecimientos,nombrefactura,paternofactura,maternofactura,codigopostal,colonia,nexterno,ninterno,rfc]
+    const nombrefamiliartutor = document.getElementById("nombre_familiar_tutor").value;
+    const apellidosfamiliartutor = document.getElementById("apellido_familiar_tutor").value;
+    const edadfamiliartutor = document.getElementById("edad_familiar_tutor").value;
+    const horariofamiliartutor = document.getElementById("horario_familiar_tutor").value;
+    const estudiosfamiliartutor = document.getElementById("estudios_familiar_tutor").value;
+    const profesionfamiliartutor = document.getElementById("profesion_familiar_tutor").value;
+
+
+    let datosaspirantes = [nombre,apellidopaterno,apellidomaterno,telefonoprincipal,telefonosecundario,correo,domicilio,alergias,padecimientos,nombrefactura,paternofactura,maternofactura,codigopostal,colonia,nexterno,ninterno,rfc,fecha,nombrefamiliartutor,apellidosfamiliartutor,edadfamiliartutor,horariofamiliartutor,estudiosfamiliartutor,profesionfamiliartutor ]
     axios.post("http://localhost:8000/aspirantes", {
         datos:datosaspirantes
         

@@ -6,6 +6,7 @@ function interesados(){
     const paternointeresados = document.getElementById("apellido_paterno").value;
     const maternointeresados = document.getElementById("apellido_materno").value;
     let generointeresados ='';
+    const fecha = new Date();
     if($('#mujer').is(':checked')){
         generointeresados = $('input[name="GeneroM"]:checked').val();
     }
@@ -30,11 +31,26 @@ function interesados(){
     const paternotutorinteresados = document.getElementById("tutor_paterno").value;
     const maternotutorinteresados = document.getElementById("tutor_materno").value;
 
-    let datosinteresados = [nombreinteresados,paternointeresados,maternointeresados,generointeresados,fechanacimientointeresado,escuelaprocedenciainteresados,comoenterointeresados,correointeresados,domiciliointeresados,telefonoprincipalinteresados,telefonosecundariointeresados,nivelinteresados,gradointeresados,nombretutorinteresados,paternotutorinteresados,maternotutorinteresados]
+   // let datosinteresados = [nombreinteresados,paternointeresados,maternointeresados,generointeresados,fechanacimientointeresado,escuelaprocedenciainteresados,comoenterointeresados,correointeresados,domiciliointeresados,telefonoprincipalinteresados,telefonosecundariointeresados,nivelinteresados,gradointeresados,nombretutorinteresados,paternotutorinteresados,maternotutorinteresados]
 
     axios.post("http://localhost:8000/interesados", {
-        datos:datosinteresados
-    
+       nombreInteresados : nombreinteresados,
+       paternoInteresados: paternointeresados,
+       maternoInteresados: maternointeresados,
+       generoInteresados : generointeresados,
+       fechaNacimientoInteresado: fechanacimientointeresado,
+       escuelaProcedenciaInteresados: escuelaprocedenciainteresados,
+       comoEnteroInteresados: comoenterointeresados,
+       correoInteresados: correointeresados,
+       domicilioInteresados:domiciliointeresados,
+       telefonoPrincipalInteresados: telefonoprincipalinteresados,
+       telefonoSecundarioInteresados: telefonosecundariointeresados,
+       nivelInteresados: nivelinteresados,
+       gradoInteresados:gradointeresados,
+       nombreTutorInteresados: nombretutorinteresados,
+       paternoTutorInteresados:paternotutorinteresados,
+       maternoTutorInteresados: maternotutorinteresados,
+       fecha:fecha
     }).then((data) => {
         Swal.fire({
             icon: 'success',

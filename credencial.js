@@ -10,8 +10,9 @@ function credencial(){
     const nss = document.getElementById("nss").value;
     const nombreCompletoFamiliar = document.getElementById("nombre_completo").value;
     const numeroTelefono = document.getElementById("telefono_alumno").value;
+    const fecha = new Date();
 
-    let datoscredencial = [nombreAlumno,matricula,curp,carrera,tipoSangre,nss,nombreCompletoFamiliar,numeroTelefono]
+    let datoscredencial = [nombreAlumno,matricula,curp,carrera,tipoSangre,nss,nombreCompletoFamiliar,numeroTelefono,fecha]
 
     axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
