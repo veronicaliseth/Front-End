@@ -36,14 +36,14 @@
     <span class="encabeza3">De esa forma nosotros nos adaptaremos de acuerdo a tus necesidades</span>
     <div class="e75_56"></div>
     <div class="e79_57"></div>
-    <a href="forAspirante.html"><button id="boton_interesados" class="e88_83"></button><!--Botón Guardar--></a>
+    <a href="#"><button id="boton_interesados" class="e88_83"></button><!--Botón Guardar--></a>
     <span class="e88_84">Guardar Datos</span>
     <span class="e88_85">RECUERDA GUARDAR TUS DATOS PARA SEGUIR CON EL PROCESO DE ADMISIÓN</span>
 
     <div class=e100_42>
       <div class="e100_43"></div>
       <div class=e130_17>
-        <select class="e130_19"> <!--Comienza el apartado de grado de interes-->
+        <select class="e130_19" id="grado"> <!--Comienza el apartado de grado de interes-->
           <option selected>Seleccione una opción</option>
           <option value="1">Primer Grado</option>
           <option value="2">Segundo Grado</option>
@@ -135,14 +135,14 @@
         </div>
         <div class="e105_3">
           <!--Fecha de nacimiento-->
-          <input class="e105_4" type="date" value="22-12-2021" id="fecha_nac">
+          <input class="e105_4" type="date"  id="fecha_nac">
           <div class="e100_23">
             <span class="e100_24">Fecha de nacimiento</span>
           </div>
           <div class="e105_7">
             <div class="e130_16">
-              <select class="e100_37"><!--Comienza el apartado de datos de escula de procedencia-->
-                <option selected>Seleccione una opción</option>
+              <select class="e100_37" id="esc"><!--Comienza el apartado de datos de escula de procedencia-->
+                <option selected >Seleccione una opción</option>
                 <option value="1">AGUSTIN MELGAR</option>
                 <option value="2">AMADO NERVO</option>
                 <option value="3">BELISARIO DOMINGUEZ</option>
@@ -159,7 +159,7 @@
                 <option value="14">CENTRO UNIVERSITARIO MESOAMERICANO JOAQUIN MIGUEL GUTIERREZ</option>
                 <option value="15">COLEGIO UNIVERSITARIO VERSALLES</option>
               </select>
-              <select class="e100_40"> <!--Comienza el apartado de datos de como se entero-->
+              <select class="e100_40" id="ent"> <!--Comienza el apartado de datos de como se entero-->
                 <option selected>Seleccione una opción</option>
                 <option value="1">Redes sociales</option>
                 <option value="2">Mediante un amigo</option>
@@ -174,9 +174,9 @@
         </div>
       </div>
       <div class=e130_23>
-        <div><input class="e130_6" type="radio" name="Genero" value="Mujer" id="mujer"/></div> <!--Sexo Mujer-->
-        <div><input class="e130_7" type="radio" name="Genero" value="Hombre" id="hombre"/></div><!--Sexo Hombre-->
-        <div><input class="e130_8" type="radio" name="Genero" value="Otro" id="otro"/></div><!--Sexo Otro-->
+        <div><input class="e130_6" type="radio" name="GeneroM" value="Mujer" id="mujer"/></div> <!--Sexo Mujer-->
+        <div><input class="e130_7" type="radio" name="GeneroH" value="Hombre" id="hombre"/></div><!--Sexo Hombre-->
+        <div><input class="e130_8" type="radio" name="GeneroT" value="Otro" id="otro"/></div><!--Sexo Otro-->
          <label class="e130_9">Hombre</label>
          <label class="e130_10">Mujer</label>
          <label class="e130_11">Otro</label>
@@ -184,6 +184,9 @@
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script src="../interesado.js"></script>
 </body>
 
 <script>
