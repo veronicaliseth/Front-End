@@ -1,8 +1,5 @@
-var boton = document.getElementById("admi");
+var boton = document.getElementById("iniciar");
 boton.addEventListener("click",usuarios);
-var botonmark = document.getElementById("mark");
-botonmark.addEventListener("click",usuarios);
-
 
 function usuarios(){
     let username = document.getElementById("user").value;
@@ -13,15 +10,24 @@ function usuarios(){
             pass:password
             
         }).then((data) => {
-            alert(data.data.resp);
-            Swal.fire({
-                icon: 'success',
-                title: 'Sesion iniciada correctamente',
-                showConfirmButton: false,
-                timer: 1500
-              })
-            console.log(data);
-            console.log("registro")
+            if (data.data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sesion iniciada correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                  }).then((result) => {
+                    location = "../marketing/marketing.html";
+                });
+                console.log(data);
+                console.log("registro")
+            }else{
+                Swal.fire({
+                    icon: 'warning',
+                    title: "Correo y/o contrasena incorrectos",
+                    confirmButtonText: `Aceptar`,
+                })
+            }
         }).catch(e => { console.log("El ingreso fallo"); })
     }else{
         alert("error");
